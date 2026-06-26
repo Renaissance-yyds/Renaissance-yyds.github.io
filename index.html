@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jiushifuqing - Python Developer & Automation Engineer</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6}
+    .container{max-width:960px;margin:0 auto;padding:0 24px}
+    .hero{padding:80px 0 60px;border-bottom:1px solid #21262d}
+    .hero h1{font-size:2.5rem;color:#f0f6fc;margin-bottom:12px}
+    .hero .subtitle{font-size:1.2rem;color:#8b949e;margin-bottom:24px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:#1f6feb22;color:#58a6ff;padding:4px 14px;border-radius:20px;font-size:.85rem;border:1px solid #1f6feb44}
+    section{padding:50px 0}
+    section h2{font-size:1.5rem;color:#f0f6fc;margin-bottom:24px;border-left:3px solid #1f6feb;padding-left:12px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:24px;transition:border-color .2s}
+    .card:hover{border-color:#1f6feb}
+    .card h3{color:#58a6ff;margin-bottom:8px;font-size:1.1rem}
+    .card p{color:#8b949e;font-size:.9rem;margin-bottom:16px}
+    .card .tech{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+    .card .tech span{background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:4px;font-size:.75rem}
+    .card .links a{color:#58a6ff;text-decoration:none;font-size:.85rem;margin-right:16px}
+    .card .links a:hover{text-decoration:underline}
+    .services{display:grid;gap:16px}
+    .svc{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;display:flex;justify-content:space-between;align-items:center}
+    .svc h3{color:#f0f6fc;font-size:1rem;margin-bottom:4px}
+    .svc p{color:#8b949e;font-size:.85rem}
+    .price{color:#3fb950;font-weight:bold;font-size:1rem;white-space:nowrap;margin-left:20px}
+    .contact-links{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{display:inline-block;background:#1f6feb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none;font-size:.9rem;transition:background .2s}
+    .btn:hover{background:#388bfd}
+    .btn.outline{background:transparent;border:1px solid #30363d;color:#c9d1d9}
+    .btn.outline:hover{border-color:#58a6ff;color:#58a6ff}
+    footer{padding:30px 0;border-top:1px solid #21262d;text-align:center;color:#484f58;font-size:.8rem}
+    @media(max-width:600px){.hero h1{font-size:1.8rem}.svc{flex-direction:column;align-items:flex-start;gap:12px}.price{margin-left:0}}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>Hi, I'm a Python Developer</h1>
+    <p class="subtitle">I help businesses automate workflows, extract data, and build tools — fast.</p>
+    <div class="tags">
+      <span class="tag">Python Automation</span>
+      <span class="tag">Web Scraping</span>
+      <span class="tag">Data Processing</span>
+      <span class="tag">Browser Automation</span>
+      <span class="tag">API Development</span>
+      <span class="tag">Chrome Extensions</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>📊 Excel Data Processor</h3>
+        <p>Batch merge, split, format Excel files. Auto-generate reports from messy data. Supports .xlsx, .csv, .xls.</p>
+        <div class="tech"><span>Python</span><span>pandas</span><span>openpyxl</span></div>
+        <div class="links"><a href="https://github.com/jiushifuqing123/demo-excel-tool" target="_blank">View Source →</a></div>
+      </div>
+      <div class="card">
+        <h3>🕷️ Smart Web Crawler</h3>
+        <p>Configurable scraping framework. Extract product data, social media content, pricing info from any website.</p>
+        <div class="tech"><span>Python</span><span>BeautifulSoup</span><span>lxml</span></div>
+        <div class="links"><a href="https://github.com/jiushifuqing123/demo-crawler" target="_blank">View Source →</a></div>
+      </div>
+      <div class="card">
+        <h3>🤖 Browser Automation Kit</h3>
+        <p>Automate repetitive browser tasks: form filling, screenshots, monitoring, data entry. No coding needed for clients.</p>
+        <div class="tech"><span>Python</span><span>Playwright</span><span>asyncio</span></div>
+        <div class="links"><a href="https://github.com/jiushifuqing123/demo-browser-auto" target="_blank">View Source →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Services I Offer</h2>
+    <div class="services">
+      <div class="svc">
+        <div><h3>Data Processing & Excel Automation</h3><p>Bulk operations, report generation, data cleaning</p></div>
+        <span class="price">¥200+</span>
+      </div>
+      <div class="svc">
+        <div><h3>Web Scraping & Data Extraction</h3><p>Product data, pricing monitoring, social media content</p></div>
+        <span class="price">¥500+</span>
+      </div>
+      <div class="svc">
+        <div><h3>Browser Automation & RPA</h3><p>Form filling, screenshots, monitoring, repetitive tasks</p></div>
+        <span class="price">¥300+</span>
+      </div>
+      <div class="svc">
+        <div><h3>Custom Script / Tool Development</h3><p>File processing, API integration, workflow automation</p></div>
+        <span class="price">¥500+</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Get In Touch</h2>
+    <div class="contact-links">
+      <a href="mailto:your-email@example.com" class="btn">📧 Email</a>
+      <a href="https://github.com/jiushifuqing123" target="_blank" class="btn outline">🐙 GitHub</a>
+      <a href="#" class="btn outline">💬 WeChat</a>
+      <a href="https://www.fiverr.com/YOUR_USERNAME" target="_blank" class="btn outline">🌐 Fiverr</a>
+      <a href="#" class="btn outline">🛒 闲鱼</a>
+    </div>
+  </section>
+
+  <footer>Built with AI · Available for freelance projects</footer>
+</div>
+</body>
+</html>
