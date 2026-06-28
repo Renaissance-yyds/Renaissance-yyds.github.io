@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renaissance - Python Developer & Automation Engineer</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6}
+    .container{max-width:960px;margin:0 auto;padding:0 24px}
+    .lang-switch{position:fixed;top:20px;right:24px;z-index:100}
+    .lang-switch button{background:#161b22;border:1px solid #30363d;color:#8b949e;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:.8rem;margin-left:4px;transition:all .2s}
+    .lang-switch button.active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+    .lang-switch button:hover{border-color:#58a6ff}
+    .hero{padding:80px 0 60px;border-bottom:1px solid #21262d}
+    .hero h1{font-size:2.5rem;color:#f0f6fc;margin-bottom:12px}
+    .hero .subtitle{font-size:1.2rem;color:#8b949e;margin-bottom:24px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:#1f6feb22;color:#58a6ff;padding:4px 14px;border-radius:20px;font-size:.85rem;border:1px solid #1f6feb44}
+    section{padding:50px 0}
+    section h2{font-size:1.5rem;color:#f0f6fc;margin-bottom:24px;border-left:3px solid #1f6feb;padding-left:12px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:24px;transition:border-color .2s}
+    .card:hover{border-color:#1f6feb}
+    .card h3{color:#58a6ff;margin-bottom:8px;font-size:1.1rem}
+    .card p{color:#8b949e;font-size:.9rem;margin-bottom:16px}
+    .card .tech{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+    .card .tech span{background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:4px;font-size:.75rem}
+    .card .links a{color:#58a6ff;text-decoration:none;font-size:.85rem;margin-right:16px}
+    .card .links a:hover{text-decoration:underline}
+    .services{display:grid;gap:16px}
+    .svc{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;display:flex;justify-content:space-between;align-items:center}
+    .svc h3{color:#f0f6fc;font-size:1rem;margin-bottom:4px}
+    .svc p{color:#8b949e;font-size:.85rem}
+    .price{color:#3fb950;font-weight:bold;font-size:1rem;white-space:nowrap;margin-left:20px}
+    .contact-links{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{display:inline-block;background:#1f6feb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none;font-size:.9rem;transition:background .2s}
+    .btn:hover{background:#388bfd}
+    .btn.outline{background:transparent;border:1px solid #30363d;color:#c9d1d9}
+    .btn.outline:hover{border-color:#58a6ff;color:#58a6ff}
+    footer{padding:30px 0;border-top:1px solid #21262d;text-align:center;color:#484f58;font-size:.8rem}
+    @media(max-width:600px){.hero h1{font-size:1.8rem}.svc{flex-direction:column;align-items:flex-start;gap:12px}.price{margin-left:0}}
+  </style>
+</head>
+<body>
+<div class="lang-switch">
+  <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
+  <button id="btn-en" onclick="switchLang('en')">EN</button>
+</div>
+<div class="container">
+  <!-- Hero -->
+  <div class="hero">
+    <h1 data-zh="你好，我是 Renaissance" data-en="Hi, I'm Renaissance">你好，我是 Renaissance</h1>
+    <p class="subtitle" data-zh="我帮助企业自动化工作流程、提取数据、搭建工具——快速交付。" data-en="I help businesses automate workflows, extract data, and build tools — fast.">我帮助企业自动化工作流程、提取数据、搭建工具——快速交付。</p>
+    <div class="tags">
+      <span class="tag">Python 自动化</span>
+      <span class="tag">Web 爬虫</span>
+      <span class="tag">数据处理</span>
+      <span class="tag">浏览器自动化</span>
+      <span class="tag">API 开发</span>
+      <span class="tag">Chrome 插件</span>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <section>
+    <h2 data-zh="精选项目" data-en="Featured Projects">精选项目</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>📊 Excel 数据处理工具</h3>
+        <p data-zh="批量合并、拆分、格式化 Excel 文件。从杂乱数据自动生成报表。支持 .xlsx, .csv, .xls。" data-en="Batch merge, split, format Excel files. Auto-generate reports from messy data. Supports .xlsx, .csv, .xls.">批量合并、拆分、格式化 Excel 文件。从杂乱数据自动生成报表。支持 .xlsx, .csv, .xls。</p>
+        <div class="tech"><span>Python</span><span>pandas</span><span>openpyxl</span></div>
+        <div class="links"><a href="https://github.com/Renaissance-yyds/demo-excel-tool" target="_blank">查看源码 →</a></div>
+      </div>
+      <div class="card">
+        <h3>🕷️ 智能爬虫框架</h3>
+        <p data-zh="可配置的抓取框架。从任意网站提取商品数据、社交媒体内容、价格信息。" data-en="Configurable scraping framework. Extract product data, social media content, pricing info from any website.">可配置的抓取框架。从任意网站提取商品数据、社交媒体内容、价格信息。</p>
+        <div class="tech"><span>Python</span><span>BeautifulSoup</span><span>lxml</span></div>
+        <div class="links"><a href="https://github.com/Renaissance-yyds/demo-crawler" target="_blank">查看源码 →</a></div>
+      </div>
+      <div class="card">
+        <h3>🤖 浏览器自动化套件</h3>
+        <p data-zh="自动化重复性浏览器任务：填表、截图、监控、数据录入。客户无需写代码。" data-en="Automate repetitive browser tasks: form filling, screenshots, monitoring, data entry. No coding needed for clients.">自动化重复性浏览器任务：填表、截图、监控、数据录入。客户无需写代码。</p>
+        <div class="tech"><span>Python</span><span>Playwright</span><span>asyncio</span></div>
+        <div class="links"><a href="https://github.com/Renaissance-yyds/demo-browser-auto" target="_blank">查看源码 →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section>
+    <h2 data-zh="服务项目" data-en="Services">服务项目</h2>
+    <div class="services">
+      <div class="svc">
+        <div><h3 data-zh="数据处理与 Excel 自动化" data-en="Data Processing & Excel Automation">数据处理与 Excel 自动化</h3><p data-zh="批量操作、报表生成、数据清洗、格式转换" data-en="Bulk operations, report generation, data cleaning, format conversion">批量操作、报表生成、数据清洗、格式转换</p></div>
+        <span class="price">¥200+</span>
+      </div>
+      <div class="svc">
+        <div><h3 data-zh="网络爬虫与数据提取" data-en="Web Scraping & Data Extraction">网络爬虫与数据提取</h3><p data-zh="商品数据、价格监控、社交媒体内容、任意公开网站" data-en="Product data, pricing monitoring, social media content, any public website">商品数据、价格监控、社交媒体内容、任意公开网站</p></div>
+        <span class="price">¥500+</span>
+      </div>
+      <div class="svc">
+        <div><h3 data-zh="浏览器自动化与 RPA" data-en="Browser Automation & RPA">浏览器自动化与 RPA</h3><p data-zh="填表、截图、监控、重复任务自动化" data-en="Form filling, screenshots, monitoring, repetitive task automation">填表、截图、监控、重复任务自动化</p></div>
+        <span class="price">¥300+</span>
+      </div>
+      <div class="svc">
+        <div><h3 data-zh="定制脚本 / 工具开发" data-en="Custom Script / Tool Development">定制脚本 / 工具开发</h3><p data-zh="文件处理、API 对接、工作流自动化、命令行工具" data-en="File processing, API integration, workflow automation, CLI tools">文件处理、API 对接、工作流自动化、命令行工具</p></div>
+        <span class="price">¥500+</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2 data-zh="联系我" data-en="Contact">联系我</h2>
+    <div class="contact-links">
+      <a href="mailto:2740167557@qq.com" class="btn">📧 QQ邮箱</a>
+      <a class="btn outline">💬 微信: 2740167557</a>
+      <a href="https://github.com/Renaissance-yyds" target="_blank" class="btn outline">🐙 GitHub</a>
+      <a href="#" class="btn outline">🛒 闲鱼</a>
+    </div>
+  </section>
+
+  <footer data-zh="AI 辅助开发 · 可承接 freelance 项目" data-en="AI-Assisted Development · Available for freelance projects">AI 辅助开发 · 可承接 freelance 项目</footer>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  localStorage.setItem('lang', lang);
+}
+// Auto-detect language
+(function() {
+  var saved = localStorage.getItem('lang');
+  if (saved) { switchLang(saved); return; }
+  var browserLang = navigator.language || navigator.userLanguage;
+  if (browserLang.indexOf('zh') !== -1) switchLang('zh');
+  else switchLang('en');
+})();
+</script>
+</body>
+</html>
