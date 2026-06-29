@@ -48,7 +48,6 @@
   <button id="btn-en" onclick="switchLang('en')">EN</button>
 </div>
 <div class="container">
-  <!-- Hero -->
   <div class="hero">
     <h1 data-zh="你好，我是 Renaissance" data-en="Hi, I'm Renaissance">你好，我是 Renaissance</h1>
     <p class="subtitle" data-zh="我帮助企业自动化工作流程、提取数据、搭建工具——快速交付。" data-en="I help businesses automate workflows, extract data, and build tools — fast.">我帮助企业自动化工作流程、提取数据、搭建工具——快速交付。</p>
@@ -61,8 +60,6 @@
       <span class="tag">Chrome 插件</span>
     </div>
   </div>
-
-  <!-- Projects -->
   <section>
     <h2 data-zh="精选项目" data-en="Featured Projects">精选项目</h2>
     <div class="projects">
@@ -86,8 +83,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Services -->
   <section>
     <h2 data-zh="服务项目" data-en="Services">服务项目</h2>
     <div class="services">
@@ -109,21 +104,17 @@
       </div>
     </div>
   </section>
-
-  <!-- Contact -->
   <section>
     <h2 data-zh="联系我" data-en="Contact">联系我</h2>
     <div class="contact-links">
       <a href="mailto:2740167557@qq.com" class="btn">📧 QQ邮箱</a>
-      <a class="btn outline">💬 微信: 2740167557</a>
+      <a class="btn outline">💬 微信: ydy0214ydy</a>
       <a href="https://github.com/Renaissance-yyds" target="_blank" class="btn outline">🐙 GitHub</a>
       <a href="#" class="btn outline">🛒 闲鱼</a>
     </div>
   </section>
-
   <footer data-zh="AI 辅助开发 · 可承接 freelance 项目" data-en="AI-Assisted Development · Available for freelance projects">AI 辅助开发 · 可承接 freelance 项目</footer>
 </div>
-
 <script>
 function switchLang(lang) {
   document.querySelectorAll('[data-' + lang + ']').forEach(el => {
@@ -134,7 +125,6 @@ function switchLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   localStorage.setItem('lang', lang);
 }
-// Auto-detect language
 (function() {
   var saved = localStorage.getItem('lang');
   if (saved) { switchLang(saved); return; }
